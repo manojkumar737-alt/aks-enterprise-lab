@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: backend
+
+data:
+  APP_NAME: "Backend API"
+  APP_ENV: "dev"
+  LOG_LEVEL: "INFO"

@@ -1,0 +1,43 @@
+##subscription_id = "YOUR_SUBSCRIPTION_ID"
+resource_group_name = "rg-aks-qa"
+location            = "Central India"
+tags = {
+  Environment = "QA"
+  Project     = "AKS"
+  Owner       = "Manoj"
+}
+vnet_name = "vnet-aks-qa"
+
+address_space = [
+  "10.0.0.0/16"
+]
+
+subnets = {
+
+  aks-subnet = {
+    address_prefixes = ["10.0.1.0/24"]
+  }
+
+  appgw-subnet = {
+    address_prefixes = ["10.0.2.0/24"]
+  }
+
+  management-subnet = {
+    address_prefixes = ["10.0.3.0/24"]
+  }
+
+}
+acr_name = "manojaksqaacr"
+
+acr_sku = "Basic"
+
+admin_enabled = false
+cluster_name  = "aks-qa"
+
+dns_prefix = "aks-qa"
+
+kubernetes_version = "1.35"
+
+vm_size = "Standard_B2s"
+
+node_count = 1
