@@ -35,6 +35,7 @@ apply)
     echo "Applying Changes to $ENV Environment"
     echo "======================================="
     ./scripts/init.sh "$ENV"
+    ./scripts/plan.sh "$ENV"
     ./scripts/apply.sh "$ENV"
     ./scripts/post-deploy.sh
     ./scripts/verify.sh
