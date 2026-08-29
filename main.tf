@@ -32,23 +32,23 @@ module "nsg" {
   nsgs = var.nsgs
 
 }
-module "acr" {
-
-  source = "./modules/acr"
-
-  acr_name = var.acr_name
-
-  resource_group_name = module.resource_group.name
-
-  location = module.resource_group.location
-
-  sku = var.acr_sku
-
-  admin_enabled = var.admin_enabled
-
-  tags = var.tags
-
-}
+#module "acr" {
+#
+#  source = "./modules/acr"
+#
+#  acr_name = var.acr_name
+#
+#  resource_group_name = module.resource_group.name
+#
+#  location = module.resource_group.location
+#
+#  sku = var.acr_sku
+#
+#  admin_enabled = var.admin_enabled
+#
+#  tags = var.tags
+#
+#}
 module "aks" {
 
   source = "./modules/aks"
@@ -69,7 +69,7 @@ module "aks" {
 
   node_count = var.node_count
 
-  acr_id = module.acr.id
+  #acr_id = module.acr.id
 
   tags           = var.tags
   service_cidr   = var.service_cidr

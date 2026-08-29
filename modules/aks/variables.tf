@@ -30,9 +30,9 @@ variable "node_count" {
   type = number
 }
 
-variable "acr_id" {
-  type = string
-}
+#variable "acr_id" {
+#  type = string
+#}
 
 variable "tags" {
   type = map(string)
